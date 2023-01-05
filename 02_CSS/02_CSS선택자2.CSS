@@ -1,0 +1,45 @@
+/* *{
+    color: green;
+} */
+
+/* 속성선택자 */
+/* div 중에 name 속성을 가지고 있는 태그 선택 */
+/* div[name]{
+    background-color: orangered;
+} */
+
+/* div 중에 name 속성값이 name1과 일치하는 태그 선택 */
+div[name=name1]{
+    background-color: orangered;
+}
+
+/* div 중에 name 속성 안에 name1 이 포함되어 있는 태그 선택  ~=를 쓰면 된다  */
+div[name~=name1]{
+    background-color: yellow;
+}
+
+/* div 중에 class 속성에서 class로 시작되는 태그 선책(단, -로 구분) */
+div[class|=class]{
+    background-color: aqua;
+}
+
+/* div 중에 class 으로 시작되는 태그 선택  */
+div[class^=div]{
+    background-color: blue;
+}
+
+/* div 중에 name속성이 2로 끝나는 태그를 선택 */
+div[name$= "2"]{
+    color: white;
+}
+
+/* div 중에 class 속성에 i를 포함하는 태그 선택 */
+div[class*=i]{
+    background-color: greenyellow;
+    color: red;
+}
+
+/* class 속성의 값이 div-class인 것 중에 name 속성 값이 name3포함되어 있는 태그 선택 (단, 속성값이 띄어쓰기 구문) */
+.div-class[name*=name3]{
+    background-color: pink;
+}
