@@ -110,9 +110,193 @@
 </form>
 
 
+<h3>type="number|range"</h3>
+<form>
+    
+<br><br><br><br><br>
+
+<!--숫자만 입력 가능 -->
+<label for="amount">수량 :</label>
+<input type="number" name="amount id=amount" value="0" min="0" >
+
+<br><br><br>
+
+<label for="point">포인트 : </label>
+<input type="range" name="point" id="point" value="100" min="0" max="1000" step="10"> 
+
+<br>
+
+<input type="submit" value="전송">
+<input type="reset" value="초기화">
+
+
+<h3>type="color|file"</h3>
+
+<!-- value="#0ff00f" 이렇게 하면 색상을 만들 수 있다  -->
+<label for="color"> 색상 : </label>
+<input type="color" name="color" id="color" value="#0ff00f">
+
+<br><br>
+
+<label for="uploadfile"> 파일 선택 :</label>
+<input type="file" name="uploadfile" id="uploadfile">
 
 
 
+<br><br>
 
+<input type="submit" value="전송">
+<input type="reset" value="초기화">
+
+</form>
+
+<h3>type="radio|checkbox"</h3>
+<form>
+
+    <fieldset>
+        <legend>성별</legend>
+        <label>
+            <!--name="gender" 둘 다 동일하게 하였기에 하나만 선택이 가능하다  
+                checked를 하면 기본적으로 체크 되어있고 안쓰면 아무것도 없다 -->
+                <input type="radio" name="gender" value="M" checked > 남자
+            </label>
+            
+            <label>
+                <input type="radio" name="gender" value="F"> 여자
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>취미</legend>
+
+            <!-- checkbox는 여러개도 체크 가능하다  -->
+            <label>
+                <input type="checkbox" name="hobby" value="baseball">야구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="football">축구
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="baskball">농구
+            </label>
+        </fieldset>
+
+<br><br>
+
+<input type="submit" value="전송">
+<input type="reset" value="초기화">
+
+</form>
+
+<h3>type="date|month|week|time|datetime|datetime-local"</h3>
+<form>
+    <label for="date">date : </label>
+    <!--value를 사용하면 날짜를 지정할 수 있다 
+        min을 사용하면 01-01 이전은 선택 못함
+        max을 사용하면 01-06 이후는 선택 못함 -->
+    <input type="date" name="date" id="date" value="2023-01-04" min="2023-01-01" max="2023-01-06">
+    
+    <br><br>
+
+    <label for="month">month :</label>
+    <input type="month" name="month" id="month" value="2023-01" min="2022-11" max="2023-03">
+
+    <br><br>
+    <label for="week">week : </label>
+    <input type="week" name="week" id="week" value="2023-w10"> <!--value="2023-w10" = 23년 10번째 주를 의미함  -->
+    
+    <br><br>
+    <label for="time">time : </label>
+    <input type="time" name="time" id="time" value="22:59:38">
+
+    <br><br>
+    <!-- 크롬, 익스플로러 , 엣지 지원 안함  -->
+    <label for="datetime">datetime : </label>
+    <input type="datetime" name="datetime" id="datetime">
+
+    <br><br>
+    <label for="datetime-local">datetime-local</label>
+    <input type="datetime-local" name="datetime=local" id="datetime-local" value="2023-01-04T22:38:27">
+
+
+    <br><br>
+    <!-- input 태그 사용 -->
+    <!-- <input type="submit" value="전송">
+    <input type="reset" value="초기화">
+    <input type="button" value="버튼" onclick="alert('버튼클릭!')"> -->
+
+    <!-- button 태그 사용 -->
+    <button>전송</button>
+    <button type="submit">전송</button>
+    <button type="reset">초기화</button>
+    <button type="button">버튼 </button>
+    <input type="button" value="버튼" onclick="alert('버튼클릭!')"> 
+</form>
+
+<h2>select 태그</h2>
+<form>
+    <label for="national">국적 : </label>
+    <select name="national" id="national">
+        <optgroup label="아시아">
+            <option value="kr">한국</option>
+            <option value="ch">중국</option>
+            <option value="jp">일본</option>
+        </optgroup label="기타">
+            <option value="fr" label="프랑스"></option>
+            <option value="us" label="미국"></option>
+            <option selected>-----</option>
+    </select>
+
+
+    <br><br>
+<input type="submit" value="전송">
+<input type="reset" value="초기화">
+
+
+</form>
+
+<h2>datalist 태그</h2>
+<form>
+    <label>
+        색상 : <input type="text" name="color">
+    </label>
+    <datalist id="colors">
+        <option value="black">검은색</option>
+        <option value="white">흰색</option>
+        <option value="skyblue">하늘색</option>
+    </datalist>
+
+    <br><br>
+    <input type="submit" value="전송">
+    <input type="reset" value="취소 ">
+
+</form>
+
+<h2>textarea 태그</h2>
+<form>
+    <textarea rows="15" cols="45" style="resize: none"
+    placeholder="내용을 입력하세요"></textarea>
+        
+    <br><br>
+    
+    <input type="submit" value="전송">
+
+</form>
+    <!-- 작업 진행 상태를 확인 -->
+    <h2>progress 태그</h2>
+    <form>
+        <progress value="0" max="100"></progress>
+
+        <br><br>
+
+        <!-- 색으로 용량 표시가 나옴  -->
+        <meter min="0" max="100" low="60" high="70" value="65"></meter>
+
+    </form>
+
+    
+
+
+
+<br><br><br>
 </body>
 </html>

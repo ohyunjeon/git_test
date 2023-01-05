@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+</head>
+<body>
+    
+    <h2>주문하기</h2>
+    <form>
+        
+        <label for="name">고객명 : </label>
+        <input type="text" name="name" id="name"  >
+    <br><br>
+    <label for="phone">전화번호 :</label>
+    <input type="tel" name="phone" id="phone" >
+    <br><br>
+    <label for="email">이메일 :</label>
+    <input type="email" name="email" id="email" >
+    
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="saiz">Small
+        <br>
+        <input type="radio" name="saiz">Medium
+        <br>
+        <input type="radio" name="saiz">Large
+        
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑선택</legend>
+        <input type="checkbox" name="eat">베이컨
+        <br>
+        <input type="checkbox" name="eat">치즈
+        <br>
+        <input type="checkbox" name="eat">양파
+        <br>
+        <input type="checkbox" name="eat">버섯
+        
+    </fieldset>
+    
+    <br>
+    <label for="time">배송시간 : </label>
+    <input type="time" name="time" id="time" value="0">
+    <br><br>
+    <label>배송 시 요청사항 : </label>
+    <textarea name="" id="" cols="" rows="3"></textarea>
+    <br><br>
+    <input type="submit" value="주문하기">
+</form>
+</body>
+</html>
