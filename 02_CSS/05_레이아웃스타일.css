@@ -1,0 +1,205 @@
+/* * {
+    color: green;
+} */
+/* 박스 모델 */
+/* width, height */
+.size-test {
+    border: 5px solid red;
+    height: 200px;
+}
+#fixed-size {
+  /* 콘텐츠의 너비와 높이를 지정한다. */
+  /* border: 5px solid red; */
+    width: 200px;
+  /* height: 200px; */
+  /* padding: 10px; */
+  /* box-sizing: border-box; */
+}
+
+#variable-size {
+  /* border: 2px solid red; */
+    width: 50%;
+  /* height: 200px; */
+}
+
+/* display */
+.display {
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+
+}
+.display-inline{
+    display: inline;
+}
+
+.display-block{
+    display: block;
+}
+
+.display-inline-bolck{
+    display: inline-block;
+}
+
+/* padding,margin */
+.space{
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+}
+
+#padding1{
+    padding: 10px;
+}
+
+#padding2{
+    /* padding-top: 50px;
+    padding-right: 100px;*/
+
+    /* 위/아래 50px, 좌/우 30px */
+    /* padding: 50px 30px; */
+
+    /* 위30px, 우 50px, 아래30px, 좌50px */
+    padding: 30px 50px 30px 50px;
+} 
+
+#margin1{
+    margin: 50px;
+}
+
+#margin2{
+    /* margin-top: 60px;
+    margin-left: 20px; */
+    
+    /* 위아래 50px, 좌/우30px */
+    /* margin: 50px 30px; */
+
+    /* 상30px, 우50px, 하30px, 좌50px */
+    margin: 30px 50px 30px 50px;
+}
+
+/* 테두리 스타일 */
+.border{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 10px solid;
+}
+
+#border1{
+    border-style: none;
+}
+#border2{
+    border-style: hidden;
+    box-shadow: 5px 5px 3px 2px gray inset;
+    /* box-shadow: 5px 5px 3px 2px gray; 그림자 밖 */
+    /* color: salmon; */
+} 
+
+#border3{
+    border-style: dashed;
+}
+
+#border4{
+    border-style: dotted;
+    /* border-color: pink; */
+    /* border-color: aqua palevioletred; */
+    border-top-color:  hotpink;
+    border-left-color: greenyellow;
+    border-bottom-color: blueviolet;
+    border-right-color:gold ;
+}
+
+#border5{
+    border-style: double;
+    /* border-width: 40px; */
+    border-color:  red;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px 20px;
+}
+
+#border6{
+    border-style: groove;
+}
+
+#border7{
+    border-style:ridge;
+}
+
+#border8 {
+    border-style: inset;
+}
+
+#border9 {
+    border-style: outset;
+}
+
+#border10 {
+    border-style: solid;
+    /* border-width: 30px; */
+    /* border-width: 20px 30px; */
+    /* border-width: 20px 30px 10px 40px; */
+    border-top-width: 20px;
+    border-left-width: thick;
+    border-right-width: medium;
+    border-bottom-width: thin;
+}
+
+/* 포지셔닝 */
+/* fioat */
+.float{
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    margin-bottom:10px ;
+    float: left;
+    /* display: inline; */
+}
+
+
+/* position */
+#outer {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+
+}
+
+#first{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+}
+
+
+
+
+#second{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+#fixed {
+    width: 100px;
+    top: 100px;
+    right: 100px;
+    height: 100px;
+    position: fixed;
+    background-color: blue;
+}
+
+
+
+
