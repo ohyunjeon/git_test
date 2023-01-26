@@ -1,0 +1,277 @@
+
+<!DOCTYPE html PUBLIC>
+<HTML>
+<HEAD>
+<TITLE> PW_search </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<style>
+
+tr, td{
+border: 0px solid none; 
+}
+
+#main-title {
+color:black;
+font-size:50pt;
+font-weight:bold;
+}
+
+#sub-title {
+color:black;
+font-size:15pt;
+font-weight:bold;
+}
+
+#middle-title {
+color:black;
+font-size:13pt;
+font-weight:bold;
+}
+
+
+.se {font-family: serif;}
+  .sa {font-family: sans-serif;}
+  .fa {font-family: fantasy;}
+  .mo {font-family: monospace;}
+
+</style>
+
+
+<script>
+function profilemenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./profile.jsp";
+frm.submit();  
+}
+function loginmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./login.jsp";
+frm.submit();  
+}
+
+function joinmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./join.jsp";
+frm.submit();  
+}
+
+function noticemenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./notice.jsp";
+frm.submit();  
+}
+function faqmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./faq.jsp";
+frm.submit();  
+}
+function guestmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./guest.jsp";
+frm.submit();  
+}
+function pw_searchmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./pw_search.jsp";
+frm.submit();  
+}
+
+function id_searchmenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./id_search.jsp";
+frm.submit();  
+}
+function studymenu(){
+var frm=document.search;
+frm.method="get";
+frm.action="./study.jsp";
+frm.submit();  
+}
+function cancle(){ 
+var frm=document.search;
+frm.method="get";
+frm.action="./home.jsp";
+frm.submit();
+
+}
+
+function gohome(){
+
+var frm3=document.search;
+frm3.method="get";
+frm3.action="./home.jsp";
+frm3.submit();  
+}
+
+
+//이메일 부분
+
+function checkid(){
+
+var frm=document.search;
+
+var regExp='/^([/\w/g\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ ';
+
+
+
+if(!regExp.test(frm.email.value)){
+
+alert('올바른 email을 입력해주세요.');
+
+frm.email.focus();
+
+}
+
+}
+
+
+
+
+function domainCheck(){
+
+var frm=document.search;
+
+if(frm.domain.value==0){
+frm.e_domain.value="";
+frm.e_domain.disabled=false;
+
+}else{
+frm.e_domain.value=frm.domain.value;
+frm.e_domain.disabled=true;
+
+}
+
+}
+
+
+
+
+</script>
+
+
+</HEAD>
+
+<BODY>
+
+<form name="search">
+
+<font face="THE왼손잡이">
+
+<table width="1330px"  height="430px" align="center"   >
+<tr>
+<td>
+<table width="650px" align="left"  border="0" style="color:black;  font-size:38px; margin-left:13%; margin-top:3%">
+<tr>
+<td>
+<table width="100px" align="left" border=0 >
+
+</table>
+</td>
+
+<td>비밀번호 찾기</td>
+<td><div id="sub-title"> |  회원정보에 등록한 정보로 인증.</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="900px" align="center" border="0" >
+<tr>
+<td align="center" >
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr> 
+<td>
+<table width="600px"  height="300px" align="center" border="0"  style=" background-color:none; border:dotted 5px none;">
+<tr>
+ <td>
+  <table width="400px"  border="0" style="margin-top:3%">
+
+    <td><div id="middle-title">&nbsp;아이디와 핸드폰번호를 입력해주세요.</div>
+    </td>
+   </tr>
+  </table>
+ </td>
+</tr>
+
+<tr>
+ <td>
+  <table width="380px" align="center" border="0">
+   <tr>
+    <td>아이디</td>
+    <td><input type="text" name="id_name"></td>
+   </tr>
+   <tr>
+    <td>휴대폰</td>
+    <td><select name="id_phone">
+    <option value ="010" selected="selected">010</option>
+    <option value ="011">011</option>
+    <option value ="016">016</option>
+    <option value ="017">017</option>
+    </select> -
+    <input type="text" name="id_phone1" style="width:70px"> -
+    <input type="text" name="id_phone2" style="width:70px"></td>
+   </tr>
+  </table>
+ </td>
+</tr>
+
+<tr>
+ <td>
+  <table width="150px"  align="center" border="0" style="margin-top:1%">
+   <tr>
+    <td><input type="button" name="enter2" value="  찾기  " align="center" style="cursor:pointer; border-color:black; background:white; color:black;" >
+     <input type="button" name="cancle2" value="  취소  " align="center" style="cursor:pointer; border-color:black; background:white; color:black;" onclick="cancle()"></td>
+   </tr>
+  </table>
+ </td>
+</tr>
+
+</table>
+</td>
+
+<tr>
+<td><br>
+<table width="750px"  height="0"  border="1"align="center">
+</table>
+</td>
+</tr>
+<tr>
+<td><br>
+<table width="450px"  height="0"  border="0" align="center" style="font-size:16px;">
+<tr>
+<td align="center" onClick="loginmenu()" style="cursor:pointer">로그인</td>
+<td align="center">|</td>
+<td align="center" onClick="joinmenu()" style="cursor:pointer">회원가입</td>
+<td align="center">|</td>
+<td align="center" onClick="id_searchmenu()" style="cursor:pointer">아이디 찾기</td>
+<td align="center">|</td>
+<td align="center" onClick="pw_searchmenu()" style="cursor:pointer">비밀번호 찾기</td>
+</tr>
+</table>
+</td>
+</tr>
+
+</table>
+</font>
+</form>
+
+</BODY>
+</HTML>
